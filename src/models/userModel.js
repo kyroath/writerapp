@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user',
     select: false
+  },
+  __v: {
+    type: Number,
+    select: false
   }
 });
 

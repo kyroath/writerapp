@@ -1,3 +1,5 @@
+const User = require('../models/userModel');
+
 const {
   getAll,
   getOne,
@@ -6,8 +8,8 @@ const {
   deleteOne
 } = require('./handlerFactory');
 
-exports.getAllUsers = getAll();
-exports.getUser = getOne();
-exports.createUser = createOne();
-exports.updateUser = updateOne();
-exports.deleteUser = deleteOne();
+exports.getAllUsers = getAll(User);
+exports.getUser = getOne(User);
+exports.createUser = createOne(User);
+exports.updateUser = updateOne(User);
+exports.deleteUser = deleteOne(User);
